@@ -33,5 +33,5 @@ setup(
     package_data={
         'fast3tree': ['fast3tree.c', get_lib_name(3, True)],
     },
-    install_requires = ['numpy'],
+    install_requires = ['numpy','tqdm'],
 )
