@@ -1,3 +1,4 @@
+import sys
 import numpy as np
 from .core import fast3tree
 
