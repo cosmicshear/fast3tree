@@ -8,17 +8,6 @@ try: # https://github.com/tqdm/tqdm/issues/506
     ipy_str = str(type(get_ipython()))
     if 'zmqshell' in ipy_str:  # jupyter
         from tqdm.notebook import tqdm
-        # https://github.com/bstriner/keras-tqdm/issues/21
-        # this removes the vertical whitespace that remains when tqdm progressbar disappears
-        from IPython.core.display import HTML
-        HTML("""
-        <style>
-        .p-Widget.jp-OutputPrompt.jp-OutputArea-prompt:empty {
-          padding: 0;
-          border: 0;
-        }
-        </style>
-        """)
     if 'terminal' in ipy_str:  # ipython
         from tqdm import tqdm 
 except:                        # terminal
